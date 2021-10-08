@@ -41,3 +41,5 @@ halideDebug
 gradient.html
 halideTracing
 halideLoopOptimization
+multiStagePipelines
+blurry_parrot_*.png

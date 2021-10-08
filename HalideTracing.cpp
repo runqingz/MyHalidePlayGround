@@ -1,7 +1,7 @@
 #include "Halide.h"
 #include <stdio.h>
 
-using namespace::Halide;
+using namespace Halide;
 
 int main(int argc, char** argv) {
     Var x("x"), y("y");
@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
         ff(x,y) = print_when(x == 20 && y == 20, sin(x), " <- this is the sin of x when x = ", x, "and y = ", y)
         + print(cos(y), " <- this is the cos of y = ", y, " x = ", x);
 
-        printf("/nEvaluating ff/n");
+        printf("\nEvaluating ff\n");
         ff.realize(40, 40);
 
         Func gg("gg");
@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
 
         gg (x, y) = print_when(e < 0, e, "A interesting point when e < 0 at x = ", x, " y = ", y);
 
-        printf("/nEvaluating gg/n");
+        printf("\nEvaluating gg\n");
         gg.realize(8, 8);
     }
 

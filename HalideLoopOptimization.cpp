@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <stdio.h>
 
-using namespace::Halide;
+using namespace Halide;
 
 int main(int argc, char** argv) {
     Var x("x"), y("y");

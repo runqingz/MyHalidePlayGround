@@ -21,6 +21,14 @@ int main(int agrc, char** argv) {
     //'realise' the function. Which JIT compile some code base on the definitin and runs it.
     //We also need to specific the domain over which Halide will evaluate
     Halide::Buffer<int32_t> output = gradient.realize(800, 600);
+    //Another way to realise in arbitrary dimention
+    //Buffer<int32_t> result(8, 8)
+    //gradient.realize(result)
+
+    //we can also do
+    //result.set_min(4, 4) to tell the top left corner, NOTE: this result in
+    //for (int y = 4; y < 12; y++)...
+    //which can result in out of bound
 
     /*
     Halide does type inference for you. Var objects represent

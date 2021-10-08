@@ -1,7 +1,7 @@
 #include "Halide.h"
 #include <stdio.h>
 
-using namespace::Halide;
+using namespace Halide;
 
 int main(int argc, char** argv) {
     //Pass a string to give name to Halide objects  
